@@ -1,0 +1,182 @@
+{
+  "mass": {
+    "kg": {
+      "name": "kilogram",
+      "relativeToBase": 1
+    },
+    "lb": {
+      "name": "pound",
+      "relativeToBase": 0.4536
+    },
+    "g": {
+      "name": "gram",
+      "relativeToBase": 0.001
+    },
+    "mg": {
+      "name": "milligram",
+      "relativeToBase": 0.000001
+    },
+    "oz": {
+      "name": "ounce",
+      "relativeToBase": 0.0283
+    }
+  },
+  "length": {
+    "m": {
+      "name": "meter",
+      "relativeToBase": 1
+    },
+    "cm": {
+      "name": "centimeter",
+      "relativeToBase": 0.01
+    },
+    "mm": {
+      "name": "millimeter",
+      "relativeToBase": 0.001
+    },
+    "km": {
+      "name": "kilometer",
+      "relativeToBase": 1000
+    },
+    "ft": {
+      "name": "foot",
+      "relativeToBase": 0.3048
+    },
+    "in": {
+      "name": "inch",
+      "relativeToBase": 0.0254
+    },
+    "yd": {
+      "name": "yard",
+      "relativeToBase": 0.9144
+    }
+  },
+  "time": {
+    "s": {
+      "name": "second",
+      "relativeToBase": 1
+    },
+    "min": {
+      "name": "minute",
+      "relativeToBase": 60
+    },
+    "h": {
+      "name": "hour",
+      "relativeToBase": 3600
+    },
+    "d": {
+      "name": "day",
+      "relativeToBase": 86400
+    },
+    "wk": {
+      "name": "week",
+      "relativeToBase": 604800
+    },
+    "mo": {
+      "name": "month",
+      "relativeToBase": 2592000
+    },
+    "yr": {
+      "name": "year",
+      "relativeToBase": 31536000
+    }
+  },
+  "temperature": {
+    "c": {
+      "name": "Celsius",
+      "relativeToBase": 1
+    },
+    "f": {
+      "name": "Fahrenheit",
+      "relativeToBase": 1.8,
+      "offset": -32
+    },
+    "k": {
+      "name": "Kelvin",
+      "relativeToBase": 1,
+      "offset": 273.15
+    }
+  },
+  "energy": {
+    "j": {
+      "name": "joule",
+      "relativeToBase": 1
+    },
+    "cal": {
+      "name": "calorie",
+      "relativeToBase": 4.184
+    },
+    "kcal": {
+      "name": "kilocalorie",
+      "relativeToBase": 4184
+    },
+    "wh": {
+      "name": "watt-hour",
+      "relativeToBase": 3600
+    },
+    "kwh": {
+      "name": "kilowatt-hour",
+      "relativeToBase": 3600000
+    },
+    "btu": {
+      "name": "British thermal unit",
+      "relativeToBase": 1055.06
+    }
+  },
+  "digital": {
+    "bit": {
+      "name": "bit",
+      "relativeToBase": 1
+    },
+    "b": {
+      "name": "byte",
+      "relativeToBase": 8
+    },
+    "kb": {
+      "name": "kilobyte",
+      "relativeToBase": 8192
+    },
+    "mb": {
+      "name": "megabyte",
+      "relativeToBase": 8388608
+    },
+    "gb": {
+      "name": "gigabyte",
+      "relativeToBase": 8589934592
+    },
+    "tb": {
+      "name": "terabyte",
+      "relativeToBase": 8796093022208
+    }
+  },
+  "volume": {
+    "l": {
+      "name": "liter",
+      "relativeToBase": 1
+    },
+    "ml": {
+      "name": "milliliter",
+      "relativeToBase": 0.001
+    },
+    "cm3": {
+      "name": "cubic centimeter",
+      "relativeToBase": 0.001
+    },
+    "m3": {
+      "name": "cubic meter",
+      "relativeToBase": 1000
+    },
+    "gall": {
+      "name": "gallon",
+      "relativeToBase": 3.78541
+    },
+    "pt": {
+      "name": "pint",
+      "relativeToBase": 0.473176
+    },
+    "qt": {
+      "name": "quart",
+      "relativeToBase": 0.946353
+    }
+  }
+}
