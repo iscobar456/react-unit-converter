@@ -7,7 +7,7 @@ function Nav({ measure = null }) {
       <Link
         to={"/convert/" + key}
         key={key}
-        className={"active" ? key === measure : ""}>
+        className={key === measure ? "active" : ""}>
           { key }
       </Link>
     );

@@ -1,0 +1,108 @@
+.converter-page {
+    --color-lightest: #FFFFFF;
+    --color-lighter: #E7EBC5;
+    --color-light: #CFD8E3;
+    --color-dark: #57768E;
+    --color-darkest: #18435A;
+    --font-color-dark: #0c232f;
+}
+
+.converter-page {
+    background-color: var(--color-lightest);
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+.converter-page nav {
+    background-color: var(--color-light);
+    border-right: .6rem var(--color-darkest) solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.converter-page nav a {
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    padding: 1rem 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.converter-page nav.hidden {
+    display: none;
+}
+
+.converter-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark);
+}
+
+.converter-page form {
+    width: 400px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+    background-color: var(--color-darkest);
+    border-radius: 2rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    padding: 1rem;
+    color: var(--font-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+
+.converter-page fieldset {
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--color-light);
+}
+
+.converter-page fieldset.quantity {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.converter-page fieldset.units {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.converter-page input[type="text"] {
+    background: var(--color-light);
+    border: none;
+    padding: .3rem;
+    color: var(--font-color-dark);
+    border-radius: .5rem;
+    flex-grow: 1;
+    width: 1px;
+    font-size: inherit;
+}
+
+@media screen and (min-width: 768px) {
+    .converter-page nav.hidden {
+        display: unset;
+    }
+    .converter-page {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            "sidebar main";
+        height: 100%;
+    }
+
+
+}

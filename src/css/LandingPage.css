@@ -1,48 +1,43 @@
-@font-face {
-    font-family: "SUSE";
-    src: url("../../public/fonts/SUSE-VariableFont_wght.ttf");
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-:root {
-    --font-color-light: #f8ffb8;
-
+.landing-page {
+    --base-content-width: 100%;
+    --color-lightest: #FFFFFF;
+    --color-light: #E7EBC5;
+    --color-dark: #30011E;
 }
 
 .landing-page {
-    background-color: #000;
-    color: var(--font-color-light);
+    background-color: var(--color-dark);
+    color: var(--color-light);
     font-family: "SUSE", sans-serif;
     width: 100%;
     height: 100%;
 }
 
-header nav {
+.landing-page header nav {
     width: var(--base-content-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
 }
 
-header nav a {
+.landing-page header nav a {
     padding: 1.1rem;
-    color: var(--font-color-light);
+    color: var(--color-light);
     text-decoration: none;
     font-size: 1.4rem;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(var(--font-color-light) 0 100%)
+    background: linear-gradient(currentColor 0 100%)
                 0 100% / var(--length, 0) 3px
                 no-repeat;
     transition: background 150ms;
 }
 
-header nav a:hover {
+.landing-page header nav a:hover {
     --length: 100%;
 }
 
-main {
+.landing-page main {
     width: var(--base-content-width);
     margin: 2rem auto;
     display: grid;
@@ -55,46 +50,46 @@ main {
     gap: 2rem;
 }
 
-.cta {
+.landing-page .cta {
     display: grid;
     margin-top: 2rem;
     padding: 0 2rem;
 }
 
-.cta p {
+.landing-page .cta p {
     font-size: 2rem;
     font-weight: 500;
     color: #fff;
 }
 
-.cta a {
+.landing-page .cta a {
     font-size: 1.25rem;
     font-family: "Roboto", sans-serif;
     padding: .7rem 1rem;
     border-radius: .6rem;
-    border: 2px var(--font-color-light) solid;
+    border: 2px var(--color-light) solid;
     justify-self: start;
     text-decoration: none;
-    color: var(--font-color-light);
+    color: var(--color-light);
     display: flex;
     align-items: center;
-    background-image: linear-gradient(var(--font-color-light) 0 100%), linear-gradient(var(--font-color-light) 0 0);
+    background-image: linear-gradient(var(--color-light) 0 100%), linear-gradient(var(--color-light) 0 0);
     background-position: 0 100%, 0 0px;
     background-size: var(--length, 0) .2rem, var(--length, 0) .2rem;
     background-repeat: no-repeat, no-repeat;
     transition: background-size 150ms;
 }
 
-.cta a:hover {
+.landing-page .cta a:hover {
     --length: 100%;
 }
 
-.cta a > img {
+.landing-page .cta a > img {
     width: 2rem;
     height: 2rem;
 }
 
-figure {
+.landing-page figure {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -103,32 +98,39 @@ figure {
     padding: 2rem;
 }
 
-figure img {
-    width: 100%;
+.landing-page figure img {
+    max-height: 65vh;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-figure figcaption {
+.landing-page figure figcaption {
     color: #fff;
     text-align: center;
 }
 
 
 @media (min-width: 768px) {
-    main {
+    .landing-page main {
         grid-template-columns: 2fr 3fr;
         grid-template-rows: 1fr;
         grid-template-areas: "cta screenshot";
     }
 
-    main figure {
-        padding-right: 6rem;
+    .landing-page main figure {
+        margin-left: 3rem;
+        align-items: start;
     }
 
-    .cta {
+    .landing-page figure figcaption {
+        margin-left: 2rem;
+    }
+
+    .landing-page .cta {
         justify-self: end;
     }
 
-    .cta a {
+    .landing-page .cta a {
         justify-self: end;
     }
 }

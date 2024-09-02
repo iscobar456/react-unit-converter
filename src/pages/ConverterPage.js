@@ -1,14 +1,13 @@
 import { RiArrowLeftRightLine } from "@remixicon/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Nav from "../components/Nav";
 import { calculateOutput } from "../util";
+import "../css/ConverterPage.css";
 
 
 function ConverterPage() {
   const [measure, conversionTable] = useLoaderData();
-
-  console.log(conversionTable)
 
   return (
     <div className="converter-page">
@@ -29,9 +28,14 @@ function ConversionForm({ conversionTable }) {
   );
   const [inputQuantity, setInputQuantity] = useState(0);
 
+  useEffect(() => {
+    setInputUnit(Object.keys(conversionTable)[0]);
+    setOutputUnit(Object.keys(conversionTable)[0]);
+  }, [conversionTable]);
+
   const generateUnitInputs = (name, unit, updateUnit) => (
     Object.keys(conversionTable).map(key => (
-      <label for={"in-unit-input-" + key} key={key}>
+      <label htmlFor={"in-unit-input-" + key} key={key}>
         <input
           type="radio"
           name={name}
@@ -46,27 +50,29 @@ function ConversionForm({ conversionTable }) {
 
   return (
     <form id="measurement-form">
-      <fieldset name="in-quantity">
-        <label for="quantity-input"># of { conversionTable[inputUnit].name }</label>
+      <fieldset name="in-quantity" className="quantity">
+        <label htmlFor="quantity-input">In: </label>
         <input
           type="text"
           name="quantity"
           id="quantity-input"
           defaultValue={inputQuantity}
-          onKeyUp={
-            (event) => {setInputQuantity(parseInt(event.target.value))}
+          onChange={
+            (event) => {setInputQuantity(parseFloat(event.target.value))}
           }/>
       </fieldset>
-      <fieldset name="in-unit">
-        <label for="in-unit-input">Input Unit</label>
+      <fieldset name="in-unit" className="units">
+        <label htmlFor="in-unit-input">Input Unit</label>
         { generateUnitInputs("in-unit", inputUnit, setInputUnit) }
       </fieldset>
-      <label for="conversion-output"># of { outputUnit }: </label>
-      <output id="conversion-output" for="quantity-input">
-        { calculateOutput(inputUnit, inputQuantity, outputUnit, conversionTable) }
-      </output>
-      <fieldset name="out-unit">
-        <label for="out-unit-input">Output Unit</label>
+      <fieldset name="out-quantity" className="quantity">
+        <label htmlFor="conversion-output">Out: </label>
+          <output id="conversion-output" htmlFor="quantity-input">
+            { calculateOutput(inputUnit, inputQuantity, outputUnit, conversionTable) }
+          </output>
+      </fieldset>
+      <fieldset name="out-unit" className="units">
+        <label htmlFor="out-unit-input">Output Unit</label>
         { generateUnitInputs("out-unit", outputUnit, setOutputUnit) }
       </fieldset>
     </form>

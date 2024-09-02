@@ -81,22 +81,6 @@
       "relativeToBase": 31536000
     }
   },
-  "temperature": {
-    "c": {
-      "name": "Celsius",
-      "relativeToBase": 1
-    },
-    "f": {
-      "name": "Fahrenheit",
-      "relativeToBase": 1.8,
-      "offset": -32
-    },
-    "k": {
-      "name": "Kelvin",
-      "relativeToBase": 1,
-      "offset": 273.15
-    }
-  },
   "energy": {
     "j": {
       "name": "joule",
