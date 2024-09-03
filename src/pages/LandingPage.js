@@ -8,9 +8,6 @@ import Nav from "../components/Nav";
 function LandingPage() {
   return (
     <div className="landing-page">
-      <header>
-        <Nav/>
-      </header>
       <Main/>
     </div>
   );
@@ -19,17 +16,21 @@ function LandingPage() {
 function Main() {
   return (
     <main>
+      <div className="lines top">
+        <div></div>
+        <div></div>
+      </div>
       <div className="cta">
-        <p>Convert between units.<br/>Simple.<br/>Don't get your hopes up.</p>
+        <p>Convert between units.<br/>Simple.<br/>Estrela do dia.</p>
         <Link to="/convert">
           <img src={ arrowRightDoubleLine } alt="Double line right arrow" />
           GET STARTED
         </Link>
       </div>
-      <figure>
-        <img src={ screenshot } alt="A screenshot of the unit converter" />
-        <figcaption> A screenshot of the unit converter </figcaption>
-      </figure>
+      <div className="lines bottom">
+        <div></div>
+        <div></div>
+      </div>
     </main>
   )
 }

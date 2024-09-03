@@ -6,6 +6,11 @@
 
 :root {
     --base-content-width: 100%;
+    --color-claret: #8B1E3F;
+    --color-dark-purple: #3C153B;
+    --color-cambridge-blue: #89BD9E;
+    --color-sunset: #F0C987;
+    --color-vermilion: #DB4C40;
 }
 
 html {

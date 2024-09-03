@@ -11,8 +11,8 @@ function ConverterPage() {
 
   return (
     <div className="converter-page">
-      <Nav measure={measure}/>
       <main>
+        <Nav measure={measure}/>
         <ConversionForm conversionTable={conversionTable} />
       </main>
     </div>
@@ -35,11 +35,11 @@ function ConversionForm({ conversionTable }) {
 
   const generateUnitInputs = (name, unit, updateUnit) => (
     Object.keys(conversionTable).map(key => (
-      <label htmlFor={"in-unit-input-" + key} key={key}>
+      <label htmlFor={name + "-input-" + key} key={key}>
         <input
           type="radio"
           name={name}
-          id={"in-unit-input-" + key}
+          id={name + "-input-" + key}
           value={key}
           checked={key === unit}
           onChange={(event) => { updateUnit(event.target.value) }} />
@@ -51,7 +51,6 @@ function ConversionForm({ conversionTable }) {
   return (
     <form id="measurement-form">
       <fieldset name="in-quantity" className="quantity">
-        <label htmlFor="quantity-input">In: </label>
         <input
           type="text"
           name="quantity"
@@ -66,10 +65,9 @@ function ConversionForm({ conversionTable }) {
         { generateUnitInputs("in-unit", inputUnit, setInputUnit) }
       </fieldset>
       <fieldset name="out-quantity" className="quantity">
-        <label htmlFor="conversion-output">Out: </label>
-          <output id="conversion-output" htmlFor="quantity-input">
-            { calculateOutput(inputUnit, inputQuantity, outputUnit, conversionTable) }
-          </output>
+        <output id="conversion-output" htmlFor="quantity-input">
+          { calculateOutput(inputUnit, inputQuantity, outputUnit, conversionTable) }
+        </output>
       </fieldset>
       <fieldset name="out-unit" className="units">
         <label htmlFor="out-unit-input">Output Unit</label>
