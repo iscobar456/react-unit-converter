@@ -21,7 +21,7 @@ function Main() {
         <div></div>
       </div>
       <div className="cta">
-        <p>Convert between units.<br/>Simple.<br/>Estrela do dia.</p>
+        <p>Unit conversion.<br/> An exercise in React.</p>
         <Link to="/convert">
           <img src={ arrowRightDoubleLine } alt="Double line right arrow" />
           GET STARTED

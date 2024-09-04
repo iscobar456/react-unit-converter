@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage";
 import ConverterPage from "./pages/ConverterPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import conversionTables from "./unitReference.json";
+import About from "./pages/About";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     loader: ({ params }) => {
       return [params.measure, conversionTables[params.measure]];
     }
+  },
+  {
+    path: "/about",
+    element: <About />
   }
 ])
 
