@@ -21,7 +21,7 @@ function Main() {
         <div></div>
       </div>
       <div className="cta">
-        <p>Unit conversion.<br/> An exercise in React.</p>
+        <p>Unit conversion.<br/> A React exercise.</p>
         <Link to="/convert">
           <img src={ arrowRightDoubleLine } alt="Double line right arrow" />
           GET STARTED
