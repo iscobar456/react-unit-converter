@@ -13,6 +13,7 @@
     background-color: var(--color-claret);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     padding: 1rem 0;
     height: 100%;
@@ -28,6 +29,10 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     text-align: center;
+}
+
+.converter-page nav a.active {
+    background-color: #731834;
 }
 
 .converter-page main {
