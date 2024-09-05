@@ -4,7 +4,7 @@ function calculateOutput(inUnit, quantity, outUnit, conversionTable) {
   }
   let baseUnits = quantity * conversionTable[inUnit].relativeToBase;
   let output = baseUnits / conversionTable[outUnit].relativeToBase;
-  return output.toFixed(3);
+  return parseFloat(output.toFixed(5));
 }
 
 export { calculateOutput };
