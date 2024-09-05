@@ -1,26 +1,24 @@
 {
   "mass": {
     "kg": {
-      "kg": {
-        "name": "kilogram",
-        "relativeToBase": 1
-      },
-      "g": {
-        "name": "gram",
-        "relativeToBase": 0.001
-      },
-      "mg": {
-        "name": "milligram",
-        "relativeToBase": 0.000001
-      },
-      "lb": {
-        "name": "pound",
-        "relativeToBase": 0.453592
-      },
-      "oz": {
-        "name": "ounce",
-        "relativeToBase": 0.0283495
-      }
+      "name": "kilogram",
+      "relativeToBase": 1
+    },
+    "g": {
+      "name": "gram",
+      "relativeToBase": 0.001
+    },
+    "mg": {
+      "name": "milligram",
+      "relativeToBase": 0.000001
+    },
+    "lb": {
+      "name": "pound",
+      "relativeToBase": 0.453592
+    },
+    "oz": {
+      "name": "ounce",
+      "relativeToBase": 0.0283495
     }
   },
   "length": {
